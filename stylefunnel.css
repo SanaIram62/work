@@ -1,0 +1,225 @@
+/* Style the form */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #1b1b1b;
+}
+#regForm {
+  margin: 100px auto;
+  padding: 40px;
+  width: 50%;
+  min-width: 300px;
+  background-color: #1b1b1b;
+}
+@keyframes fadeAnima {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes fadeAnima {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1000;
+  }
+}
+@keyframes moveLogo {
+  from {
+  }
+  to {
+    top: 10px;
+    left: 75px;
+    width: 100px;
+  }
+}
+.load {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  background-color: #181714;
+  z-index: 999;
+  animation-name: fadeAnima;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.LogoDrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  z-index: 1000;
+  transform: translateY(-75px);
+  transform: translateX(-75px);
+  height: auto;
+  animation-name: moveLogo;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+h1{
+  /* margin-left: 85px; */
+  text-align: center;
+}
+div {
+    /* margin-left: 85px; */
+  text-align: center;
+  /* color: #F1B23C; */
+}
+.tab {
+  background: #ecd77e;
+  background-image: linear-gradient(to right, #ecd77e 20%, #a88020 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  background: #ecd77e;
+  background-image: linear-gradient(to right, #ecd77e 20%, #a88020 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 70%;
+  font-size: 17px;
+  font-family: Raleway;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  border-top : transparent;
+  border-left: transparent;
+  border-right: transparent;
+  outline: none;
+
+}
+
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+#service {
+  height: 44px;
+  border:none;
+  overflow: visible;
+}
+
+#service input[type="radio"]{
+  display:none;
+
+}
+#service span {
+  display:inline-block;
+  padding:10px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #ecd77e 20%, #a88020 100%);
+  border-image-slice: 1;
+  color: #F1B23C;
+  margin:3px;
+
+}
+#service input[type="radio"]:checked+span {
+  background-color:  #F1B23C;;
+  color:white;
+  font-weight: bold;
+  animation: glowing 400ms infinite;
+}
+/* @keyframes glowing {
+  0% {
+    background-color: #F1B23C;
+    box-shadow: 0 0 3px #F1B23C;
+  }
+  50% {
+    background-color:#e2bb71;
+    box-shadow: 0 0 5px #e2bb71;
+  }
+  100% {
+    background-color: #F1B23C;
+    box-shadow: 0 0 3px #F1B23C;
+  }
+} */
+@keyframes glowing {
+  0% {
+    background-color: #f1b23c;
+    -webkit-text-fill-color: #000;
+    box-shadow: 0 0 5px #f1b23c;
+  }
+  50% {
+    background-color: #e2bb71;
+    -webkit-text-fill-color: #000;
+    box-shadow: 0 0 20px #e2bb71;
+  }
+  100% {
+    background-color: #f1b23c;
+    -webkit-text-fill-color: #000;
+    box-shadow: 0 0 5px #f1b23c;
+  }
+}
+#prevBtn {
+background-image:linear-gradient(to right,#ecd77e 20%, #a88020 100%);
+color: white;
+border:2px solid #1b1b1b;
+border-radius: 3px;
+padding: 10px;
+}
+#nextBtn {
+background-image:  linear-gradient(to right, #ecd77e 20%, #a88020 100%);
+
+color: white;
+border:2px solid #1b1b1b;
+border-radius: 3px;
+padding: 10px;
+}
+h1 {
+  background: #ecd77e;
+  background-image: linear-gradient(to right, #ecd77e 20%, #a88020 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+#submitbtn {
+  display:none;
+}
